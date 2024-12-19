@@ -1,0 +1,84 @@
+/* Reset dan styling dasar */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    color: white;
+    text-align: center;
+    background: linear-gradient(135deg, #ff99cc, #66ccff); /* Gradien yang lembut dengan warna pink dan biru muda */
+    background-size: cover;
+    background-position: center;
+    animation: backgroundAnimation 10s infinite alternate;
+}
+
+/* Animasi latar belakang untuk perubahan warna yang halus */
+@keyframes backgroundAnimation {
+    0% {
+        background: linear-gradient(135deg, #ff99cc, #66ccff);
+    }
+    100% {
+        background: linear-gradient(135deg, #66ccff, #ff99cc);
+    }
+}
+
+.container {
+    background-color: rgba(0, 0, 0, 0.6); /* Transparansi dengan latar belakang gelap untuk kontras yang lebih baik */
+    border-radius: 20px;
+    padding: 40px;
+    max-width: 600px;
+    width: 100%;
+    text-align: center;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease-in-out;
+    backdrop-filter: blur(8px); /* Efek blur pada latar belakang container */
+}
+
+.container:hover {
+    transform: scale(1.05);
+}
+
+h1 {
+    font-size: 3em;
+    color: #fffb00;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    animation: fadeIn 2s ease-out;
+}
+
+button {
+    font-size: 1.2em;
+    background-color: #ff6347;
+    color: white;
+    padding: 15px 30px;
+    border: none;
+    cursor: pointer;
+    border-radius: 50px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    margin-top: 20px;
+}
+
+button:hover {
+    background-color: #ff4500;
+    transform: scale(1.1);
+}
+
+/* Animasi fadeIn untuk teks */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
